@@ -26,8 +26,10 @@ jobs:
       - name: Install isolated audit tools
         env:
           NPM_CONFIG_USERCONFIG: /dev/null
-          NPM_CONFIG_GLOBALCONFIG: /dev/null
-        run: npm install --prefix "$RUNNER_TEMP/relay-audit" --ignore-scripts --no-audit --no-fund playwright-core@1.62.1 lighthouse@13.5.0
+          NPM_CONFIG_GLOBALCONFIG: ${{ runner.temp }}/relay-empty-global.npmrc
+        run: |
+          cd "$RUNNER_TEMP"
+          npm install --prefix "$RUNNER_TEMP/relay-audit" --ignore-scripts --no-audit --no-fund playwright-core@1.62.1 lighthouse@13.5.0
       - name: Verify website, capture screenshots and Lighthouse
         run: node .relay/verify.mjs
       - name: Upload original verified evidence

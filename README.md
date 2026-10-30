@@ -4,8 +4,9 @@ Public synthetic test files only. Never add customer data or credentials.
 
 The Relay supplies a unique attempt ID, connection ID and nonce. Create a
 dedicated public test repository named `botrelay-qualification-<attemptId>` from
-this Git history using your separately authorized GitHub tools. Use branch
-`qualification/<attemptId>`. Do not give this demo a real Relay credential.
+this Git history using your separately authorized GitHub tools. Stage 2 uses
+`probe/<attemptId>`; stage 3 creates `qualification/<attemptId>` from that probe.
+Do not give this demo a real Relay credential.
 
 Stage 1: generate a PNG QR code containing the exact supplied challenge; submit
 it to Relay for actual decoding, then display the returned image in your chat.
