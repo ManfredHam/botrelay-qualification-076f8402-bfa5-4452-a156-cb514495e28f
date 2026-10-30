@@ -40,3 +40,7 @@ tag, ancestry and successful fixed-workflow run before passing stage 3.
 Missing GitHub/file/image/browser tools are blockers to report, not a reason to
 claim success. This technical demo does not verify account identity, private
 repository permissions, unattended availability or production deployment rights.
+
+## Actual synthetic probe
+
+cc62559f8197093d69f3027ecb4a2dcd96b17597a7650fa58cdbbcaf3ad7bc6e
